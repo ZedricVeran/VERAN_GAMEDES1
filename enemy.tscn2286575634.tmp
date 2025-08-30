@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc15lys7577go"]
+
+[ext_resource type="Script" uid="uid://7o80hskb8ava" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://dosqhi8pywtg3" path="res://Enemy/PNG/Objects_separately/256/centipede_dark_shadow1.png" id="1_7k104"]
+
+[node name="Enemy" type="Node2D"]
+script = ExtResource("1_4gyqm")
+
+[node name="CentipedeDarkShadow1" type="Sprite2D" parent="."]
+position = Vector2(521, 501)
+scale = Vector2(3.03125, 2.41406)
+texture = ExtResource("1_7k104")
+flip_h = true

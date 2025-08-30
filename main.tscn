@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4jf2ygoq06w6"]
+
+[ext_resource type="Script" uid="uid://dlx3chpouer17" path="res://main.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ig7tw")
+
+[node name="Label" type="Label" parent="."]
+offset_top = 2.0
+offset_right = 415.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 42
+text = "This is a text"
+horizontal_alignment = 1
+vertical_alignment = 1

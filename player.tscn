@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdu0ufl5pv3co"]
+
+[ext_resource type="Texture2D" uid="uid://bw1kwagc3qmuj" path="res://graphics/PNG_Parts&Spriter_Animation/Ship4/Ship4.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://bc87k3bo5c8k7" path="res://player.gd" id="1_onrkg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
+radius = 18.976
+height = 128.932
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_onrkg")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-3.8147e-06, 9.53674e-07)
+scale = Vector2(0.792032, 0.698444)
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-3.8147e-06, 9.53674e-07)
+rotation = -1.55509
+scale = Vector2(0.792032, 0.698444)
+shape = SubResource("CapsuleShape2D_onrkg")

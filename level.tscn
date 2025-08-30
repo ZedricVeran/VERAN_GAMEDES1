@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgmj5i4a0a2s8"]
+
+[ext_resource type="Texture2D" uid="uid://c73wx855fluc4" path="res://background/space back 3.jpg" id="1_oi3di"]
+[ext_resource type="PackedScene" uid="uid://bdu0ufl5pv3co" path="res://player.tscn" id="2_0b4ue"]
+[ext_resource type="PackedScene" uid="uid://bc15lys7577go" path="res://enemy.tscn" id="3_f2txt"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oi3di"]
+normal = Vector2(1, 0)
+
+[node name="Level" type="Node2D"]
+
+[node name="SpaceBack3" type="Sprite2D" parent="."]
+position = Vector2(577.563, 330.375)
+scale = Vector2(0.609831, 0.697135)
+texture = ExtResource("1_oi3di")
+
+[node name="Player" parent="." instance=ExtResource("2_0b4ue")]
+position = Vector2(59, 353)
+
+[node name="Enemy" parent="." instance=ExtResource("3_f2txt")]
+position = Vector2(875, 340)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 349)
+shape = SubResource("WorldBoundaryShape2D_oi3di")
