@@ -1,23 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://bc15lys7577go"]
+[gd_scene load_steps=3 format=3 uid="uid://bc15lys7577go"]
 
 [ext_resource type="Script" uid="uid://7o80hskb8ava" path="res://enemy.gd" id="1_4gyqm"]
-[ext_resource type="Texture2D" uid="uid://dosqhi8pywtg3" path="res://Enemy/PNG/Objects_separately/256/centipede_dark_shadow1.png" id="1_7k104"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4gyqm"]
 radius = 59.0516
 height = 164.867
 
-[node name="Enemy" type="Node2D"]
+[node name="Enemy" type="Area2D"]
 script = ExtResource("1_4gyqm")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, 2.00003)
 scale = Vector2(3.03125, 2.41406)
-
-[node name="CentipedeDarkShadow1" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("1_7k104")
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2.00003)
+scale = Vector2(3.03125, 2.41406)
 shape = SubResource("CapsuleShape2D_4gyqm")
-one_way_collision = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
